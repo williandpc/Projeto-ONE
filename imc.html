@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    function IMC(peso, altura){
+
+        imc = peso/altura**2
+        mostra("Com o peso de " + peso + " kg, e a alutra de " + altura + "m, temos um índice de massa corporal de: " + Math.round(imc))
+    }  
+    IMC(70, 1.71)
+</script>
+
+
