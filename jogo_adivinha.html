@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    var num = parseInt(Math.round(Math.random() * 10))
+    var numAdivinhado = parseInt(prompt("Digite um valor de 0 à 10: "))
+
+    if (numAdivinhado == num) {
+
+        mostra("<h1>Parabens, você acertou!!!</h1>")
+
+    }
+    
+    else{
+
+        mostra("<h1>Não foi dessa vez :(. O número pensado foi: " + num + "</h1>") 
+
+    }
+    
+    console.log(num)
+</script>
