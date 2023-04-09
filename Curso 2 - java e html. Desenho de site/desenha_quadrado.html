@@ -1,0 +1,40 @@
+<canvas width="600" height="400"></canvas>
+
+
+<script>
+
+
+    function desenhoQuadradoVerde(inicioX, inicioY){
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = 'yellow';
+        pincel.fillRect(inicioX, inicioY, 50, 50);
+        pincel.strokeStyle = "blue"
+        pincel.strokeRect(inicioX, inicioY, 50, 50)
+        }
+
+    function desenhaEscadacQuadrados(total){
+
+        for(var c = 0; c < total; c++){
+
+            desenhoQuadradoVerde(c *50, c * 50)
+
+        }
+
+    }
+
+    desenhaEscadacQuadrados(parseInt(prompt("Quantos quadrados deseja?")))
+
+    function desenhaVariosQuadrados(total){
+
+        for(var c = 0; c < total; c++){
+
+    desenhoQuadradoVerde(c *50, 0)
+
+    }
+
+    }
+
+    desenhaVariosQuadrados(parseInt(prompt("Quantos quadrados deseja em linha reta?")))
+</script>
