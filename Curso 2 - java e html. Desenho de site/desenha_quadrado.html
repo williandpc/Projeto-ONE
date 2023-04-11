@@ -4,37 +4,37 @@
 <script>
 
 
-    function desenhoQuadradoVerde(inicioX, inicioY){
+    function desenhoQuadradoVerde(inicioX, inicioY, cor){
         var tela = document.querySelector('canvas');
         var pincel = tela.getContext('2d');
 
-        pincel.fillStyle = 'yellow';
+        pincel.fillStyle = cor;
         pincel.fillRect(inicioX, inicioY, 50, 50);
-        pincel.strokeStyle = "blue"
+        pincel.strokeStyle = "black"
         pincel.strokeRect(inicioX, inicioY, 50, 50)
         }
 
-    function desenhaEscadacQuadrados(total){
+    function desenhaEscadacQuadrados(total, cor){
 
         for(var c = 0; c < total; c++){
 
-            desenhoQuadradoVerde(c *50, c * 50)
+            desenhoQuadradoVerde(c *50, c * 50, cor)
 
         }
 
     }
 
-    desenhaEscadacQuadrados(parseInt(prompt("Quantos quadrados deseja?")))
+    desenhaEscadacQuadrados(parseInt(prompt("Quantos quadrados deseja?")), prompt("Qual cor desejada?"))
 
-    function desenhaVariosQuadrados(total){
+    function desenhaVariosQuadrados(total, cor){
 
         for(var c = 0; c < total; c++){
 
-    desenhoQuadradoVerde(c *50, 0)
+    desenhoQuadradoVerde(c *50, 0, cor)
 
     }
 
     }
 
-    desenhaVariosQuadrados(parseInt(prompt("Quantos quadrados deseja em linha reta?")))
+    desenhaVariosQuadrados(parseInt(prompt("Quantos quadrados deseja em linha reta?")), prompt("Qual cor desejada?"))
 </script>
